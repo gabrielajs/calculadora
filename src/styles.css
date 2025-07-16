@@ -3,4 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}/* You can add global styles to this file, and also import other style files */
+    background-color: #f0f0f0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
