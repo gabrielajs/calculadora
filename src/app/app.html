@@ -3,26 +3,28 @@
     <h1 class="title-primary">calculadora simples desenvolvida em angular</h1>
 
     <div class="content-calculator border-radius padding">
-      <div class="display-calculator border-radius padding"></div>
+      <div class="display-calculator border-radius padding">
+        {{ resultadoDisplay }}
+      </div>
       <div class="calculator-buttons">
         <div class="calculator-operation">
-          <div class="operation-items padding border-radius">+</div>
-          <div class="operation-items padding border-radius">-</div>
-          <div class="operation-items padding border-radius">*</div>
-          <div class="operation-items padding border-radius">/</div>
-          <div class="operation-items padding border-radius">=</div>
+          <div class="operation-items padding border-radius" (click)="setOperacao('+')">+</div>
+          <div class="operation-items padding border-radius" (click)="setOperacao('-')">-</div>
+          <div class="operation-items padding border-radius" (click)="setOperacao('*')">*</div>
+          <div class="operation-items padding border-radius" (click)="setOperacao('/')">/</div>
+          <div class="operation-items padding border-radius" (click)="calcular()">=</div>
         </div>
         <div class="calculator-numbers">
-          <div class="operation-items padding border-radius">1</div>
-          <div class="operation-items padding border-radius">2</div>
-          <div class="operation-items padding border-radius">3</div>
-          <div class="operation-items padding border-radius">4</div>
-          <div class="operation-items padding border-radius">5</div>
-          <div class="operation-items padding border-radius">6</div>
-          <div class="operation-items padding border-radius">7</div>
-          <div class="operation-items padding border-radius">8</div>
-          <div class="operation-items padding border-radius">9</div>
-          <div class="padding border-radius clear">limpar</div>
+          <div class="operation-items padding border-radius" (click)="apresentarNum('1')">1</div>
+          <div class="operation-items padding border-radius" (click)="apresentarNum('2')">2</div>
+          <div class="operation-items padding border-radius" (click)="apresentarNum('3')">3</div>
+          <div class="operation-items padding border-radius" (click)="apresentarNum('4')">4</div>
+          <div class="operation-items padding border-radius" (click)="apresentarNum('5')">5</div>
+          <div class="operation-items padding border-radius" (click)="apresentarNum('6')">6</div>
+          <div class="operation-items padding border-radius" (click)="apresentarNum('7')">7</div>
+          <div class="operation-items padding border-radius" (click)="apresentarNum('8')">8</div>
+          <div class="operation-items padding border-radius" (click)="apresentarNum('9')">9</div>
+          <div class="padding border-radius clear" (click)="limpar()">limpar</div>
         </div>
       </div>
     </div>
